@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for class,seat in seats.items  %}
+    {% for each_row,seat_list in seat.items  %}
+        {% for i in seat_list %}
+            <button style="float:left" class="seat" value="{{ class }}_{{ each_row }}_{{ i }}">{{ class }}{{ each_row }}{{ i }}</button>
+        {% endfor %}
+        <br><br>
+    {% endfor %}
+    <br><br>
+{% endfor %}
+
+
+{% for class,seat in seats_booked.items  %}
+    {% for each_row,seat_list in seat.items  %}
+        {% for i in seat_list %}
+            <input type="hidden" class="bookedseat" value="{{ class }}_{{ each_row }}_{{ i }}">
+        {% endfor %}
+    {% endfor %}
+{% endfor %}
+
+
+</body>
+<script>
+       function booked(){
+           console.log('hello')
+            seats=document.getElementsByClassName("seat");
+            bookedseat=document.getElementsByClassName("bookedseat");
+            console.log(bookedseat.length)
+            for(i=0;i<seats.length;i++){
+                console.log('hello1')
+                for(j=0;j<bookedseat.length;j++){
+                    console.log('hello2')
+                    console.log(seats[i].value,bookedseat[j].value);
+                    if (seats[i].value == bookedseat[j].value){
+                        seats[i].disabled=true;
+                    }
+                }
+            }
+       }
+
+        booked();
+</script>
+</html>

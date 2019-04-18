@@ -1,0 +1,152 @@
+
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>movie booking</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="{% static 'registration/style.css' %}" type="text/css" media="all" />
+<link rel="stylesheet" href="{% static 'registration/flexslider.css' %}" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script src="{% static 'registration/modernizr.js' %}"></script>
+<script src="{% static 'registration/jquery.min.js' %}"></script>
+<script src="{% static 'registration/jquery.color-RGBa-patch.js' %}"></script>
+<script src="{% static 'registration/example.js' %}"></script>
+<!-- jQuery -->
+<!-- FlexSlider -->
+
+  <!-- DC Tabs CSS -->
+<link type="text/css" rel="stylesheet" href="http://www.dreamtemplate.com/dreamcodes/tabs/css/tsc_tabs.css" />
+ <!-- jQuery Library (skip this step if already called on page ) -->
+<script type="text/javascript" src="http://www.dreamtemplate.com/dreamcodes/jquery.min.js"></script> <!-- (do not call twice) -->
+ <!-- DC Tabs JS -->
+<!--<script type="text/javascript" src="http://www.dreamtemplate.com/dreamcodes/tabs/js/tsc_tabs.js"></script>-->
+<link rel="stylesheet" href="{% static 'registration/tsc_tabs.css' %}" type="text/css" media="all" />
+</head>
+<body>
+<div class="header">
+	<div class="header-top">
+		<div class="wrap">
+			<div class="banner-no">
+		  		<!--<img src="{% static 'registration/banner-no.png' %}" alt=""/> -->
+		    </div>
+			  <div class="nav-wrap">
+					<ul class="group" id="example-one">
+			           <li class="current_page_item"><a href={% url "home" %}>Home</a></li>
+			           <li><a href={% url "about" %}>About</a></li>
+			  		   <li><a href={% url "movies_events" %}>Movies & Events</a></li>
+			  		   <li><a href={% url "contact" %}>Contact</a></li>
+                        <li><a href={% url "logout" %} id="logout">logout</a></li>
+                        <li><a href={% url "viewprofile" %} >viewprofile</a></li>
+			        </ul>
+			  </div>
+ 			<div class="clear"></div>
+   		</div>
+    </div>
+<div class="block">
+	<div class="wrap">
+		<div class="h-logo">
+			<a href="index.html"><img src="{% static 'registration/logo.png' %}"  alt=""/></a>
+		</div>
+        <form action="#" id="reservation-form">
+		       <fieldset>
+		                <div class="field">
+			                 <label>Find a Movie:</label>
+			                  <select class="select2">
+			                    <option>Movie list</option>
+			                  </select>
+			            </div>
+		                <div class="field1">
+			                   <label>Search</label>
+			                  <select class="select1">
+			                    <option>Movies or Actors</option>
+			                  </select>
+		                </div>
+		       </fieldset>
+            </form>
+            <div class="clear"></div>
+   </div>
+</div>
+
+</div>
+
+
+
+
+<div class="content">
+	<div class="wrap">
+		<div class="content-top">
+			{% block content %}
+
+
+
+			{% endblock %}
+
+		</div>
+
+
+
+
+				<div class="clear"></div>
+			</div>
+	</div>
+</div>
+
+
+
+
+
+
+<div class="footer" style="bottom: 0px">
+	<div class="wrap">
+			<div class="footer-top">
+				<div class="col_1_of_4 span_1_of_4">
+					<div class="footer-nav">
+		                <ul>
+		                   <li><a href="#">Our Tips of gallery Template diam</a></li>
+		                    <li><a href="#">Our Tips of gallery Template diam</a></li>
+		                     <li><a href="#">Our Tips of gallery Template diam</a></li>
+		                       <li><a href="#">Our Tips of gallery Template diam</a></li>
+		                   </ul>
+		              </div>
+				</div>
+				<div class="col_1_of_4 span_1_of_4">
+					<div class="textcontact">
+						<p>consectetuer adipiscing elit,<br>
+						consectetuer<br>
+						Ph: +1-800-234-52589.<br>
+						Email : <a href="mailto:example@mail.com">mail@example.com</a><br>
+						</p>
+					</div>
+				</div>
+				<div class="col_1_of_4 span_1_of_4">
+					<div class="call_info">
+						<p class="txt_3">Call us toll free:</p>
+						<p class="txt_4">1 800 234 23456</p>
+					</div>
+				</div>
+				<div class="col_1_of_4 span_1_of_4">
+					<div class=social>
+						<a href="#"><img src="{% static 'registration/fb.png' %}" alt=""/></a>
+						<a href="#"><img src="{% static 'registration/tw.png' %}" alt=""/></a>
+						<a href="#"><img src="{% static 'registration/dribble.png' %}" alt=""/></a>
+						<a href="#"><img src="{% static 'registration/pinterest.png' %}" alt=""/></a>
+					</div>
+
+				</div>
+                <div class="col-12">
+
+                </div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+	<div class="wrap">
+	<div class="copy">
+		<p>© 2013 Theater. All Rights Reserved | Design by <a href=>IIITS</a></p>
+	</div>
+ 	</div>
+</div>
+</body>
+</html>

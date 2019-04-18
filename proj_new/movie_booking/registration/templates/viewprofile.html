@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <h1>User Profile</h1>
+          <h1>Username: {{ user }}</h1>
+          <h1>Email :  {{ user.email }}</h1>
+         <br>
+          <a href="{% url 'editprofile' %}">Edit Profile</a><br>
+          <a href="{% url 'change_password' %}">Change your password here !</a>
+
+
+
+
+    <br><br><br><br><br><br>
+<script>
+  $(document).ready(function() {
+    $("#SideNavBar").empty()
+    });
+    
+</script>
+{% endblock %}
